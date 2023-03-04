@@ -1,6 +1,5 @@
 package gov.iti.controller;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import gov.iti.model.User;
@@ -28,7 +27,8 @@ public class SignUpServlet extends HttpServlet {
         String fileName = user.getUserName() + user.getBirthdate();
 
         try {
-            file.write("D:\\textEditor\\serverImages\\" + fileName + ".jpg");
+            //TODO : Enter file directory
+            file.write("Enter file directory" + fileName + ".jpg");
         } catch (IOException fne) {
             response.sendRedirect("signUp");
             return;

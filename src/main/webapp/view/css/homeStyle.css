@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(26, 30, 53);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a{
+    height: 20px;
+    color: white;
+    background-color: rgb(242, 176, 21);
+    padding: 10px;
+
+}
+a:hover { 
+    background-color: rgba(213, 213, 213, 0.381);
+}
+
+.bar{
+    display: flex;
+    height: 20pxt;
+    padding: 10px;
+    background-color: rgb(242, 176, 21);
+    margin-bottom: 10px;
+}
+
+h1{
+    margin-top: 10px;
+    font-size:3em;
+    color: white;
+    margin: auto;
+    width: 50%;
+}
+
+p {
+    font-size: medium;
+    font-size:1.5em;
+    color: white;
+
+}
+
+.filledF {
+    width: 30%;
+    height: 40px;
+    border-radius: 20px;   
+    padding: 8px; 
+    margin-bottom: 10px;
+}
+
+.filledB {
+    width: 5%;
+    height: 40px;
+    border-radius: 20px;   
+    padding: 8px; 
+    background-color: rgb(242, 176, 21);
+    margin-bottom: 10px;
+    color: white;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+  .queryArea{
+    width: 70%;
+    height: 200px;
+    border-radius: 20px;   
+    padding: 8px; 
+    margin-bottom: 10px;
+  }
+
+  #table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+  }
+  
+  #table td, #table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #table tr:nth-child(even){background-color: #f2f2f2;}
+  #table tr:nth-child(odd){
+color: white;
+}
+
+  #table tr:hover {background-color: #ddd;}
+  
+  #table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(242, 176, 21);
+    color: white;
+  }

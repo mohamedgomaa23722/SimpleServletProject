@@ -28,10 +28,10 @@ public class SignUpServlet extends HttpServlet {
         String fileName = getFileName(file);
 
         try  {
-            //TODO : Enter save Directory
-            file.write("Enter save Directory" + fileName);
-        } catch (FileNotFoundException fne) {
-            fne.printStackTrace();
+            file.write("D:\\textEditor\\serverImages\\" + fileName);
+        } catch (IOException fne) {
+            response.sendRedirect("signUp");
+            return;
         }
 
         boolean isRegister = UserImpl.getInstance().signUp(user);

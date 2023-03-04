@@ -15,8 +15,7 @@ public class DownloadServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("video/mp4");
-        //TODO : Enter file Directory
-        String fileDirectory = "Enter File Directory";
+        String fileDirectory = "D:\\textEditor\\";
         String fileName = "f.mp4";
         File file = new File(fileDirectory + fileName);
         response.setHeader("Content-Disposition", "attachment; filename=\"image.mp4\"");
@@ -25,7 +24,7 @@ public class DownloadServlet extends HttpServlet {
             fileOutputStream.read(imageBytes);
             response.getOutputStream().write(imageBytes);
         } catch (Exception e) {
-            e.printStackTrace();
+            // TODO: handle exception
         }
     }
 }

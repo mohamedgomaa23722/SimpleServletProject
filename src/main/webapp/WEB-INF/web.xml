@@ -5,6 +5,16 @@
     version="6.0"
     metadata-complete="true">
     <servlet>
+        <servlet-name>manager</servlet-name>
+        <servlet-class>gov.iti.controller.ManagerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>manager</servlet-name>
+        <url-pattern>/manager</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>download</servlet-name>
         <servlet-class>gov.iti.controller.DownloadServlet</servlet-class>
     </servlet>
@@ -116,4 +126,33 @@
         <filter-name>ValidationFilter</filter-name>
         <servlet-name>loginReq</servlet-name>
     </filter-mapping>
+
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>
+                Restricted Area
+            </web-resource-name>
+            <url-pattern>/manager</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+            <http-method>DELETE</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>manager</role-name>
+            <role-name>tomcat</role-name>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <realm-name>User Basic Authentication</realm-name>
+        <form-login-config>
+            <form-login-page>/view/pages/managerLogin.jsp</form-login-page>
+            <form-error-page>/view/pages/errorPage.html</form-error-page>
+        </form-login-config>
+    </login-config>
+
 </web-app>

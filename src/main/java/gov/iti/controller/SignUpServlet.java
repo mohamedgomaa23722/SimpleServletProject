@@ -25,10 +25,10 @@ public class SignUpServlet extends HttpServlet {
 
         User user = new User(userName, password, date);
 
-        String fileName = getFileName(file);
+        String fileName = user.getUserName() + user.getBirthdate();
 
-        try  {
-            file.write("D:\\textEditor\\serverImages\\" + fileName);
+        try {
+            file.write("D:\\textEditor\\serverImages\\" + fileName + ".jpg");
         } catch (IOException fne) {
             response.sendRedirect("signUp");
             return;

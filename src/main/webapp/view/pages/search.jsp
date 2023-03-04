@@ -23,9 +23,12 @@
                         <h1>Welcome</h1>
                         <h1>${userBean.userName}</h1>
                         <h1>${online} online User</h1>
+                        <form action="/MG1/download" method="get">
+                            <input class="filledB" type="submit" value="download" id="download"/>
+                        </form>
+
                         <form action="/MG1/logOut" method="get">
-                            <input class="filledB" type="submit" value="signOut"
-                                name="logOut" id="signout"/>
+                            <input class="filledB" type="submit" value="signOut" id="signout"/>
                         </form>
                         <c:if test="${userBean.userName eq 'gomaa'}">
                             <h1>Admin</h1>

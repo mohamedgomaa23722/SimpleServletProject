@@ -5,18 +5,20 @@
         <title>My Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="view/css/styleFile.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src=http://code.jquery.com/jquery-latest.min.js ></script>
-        <script src="view/js/chat.js"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src=http://code.jquery.com/jquery-latest.min.js></script>
+        <script type="text/javascript" src="view/js/chat.js"></script>
     </head>
     <body>
         <div id="container">
             <div id="subContainer">
                 <h1>Sign in</h1>
-                <form ACTION="" name="ajax">
+                <form ACTION="chat" method="get">
                     <div class="input-container">
                         <i class="fa fa-user icon"></i>
-                        <input class="input-field" id="name" type="text" name="name"
+                        <input class="input-field" id="name" type="text"
+                            name="name"
                             placeholder="Eneter Username">
                     </div>
 
@@ -27,10 +29,9 @@
                         <input id="cfemale" type="checkbox" name="female">
                         <label id="female" for="cfemale">Female</label><br>
                     </div>
-                        <input type="button" value="Sign in" id="submit">
-                </div>
-
-            </form>
+                        <input onclick = "login();" type="button" value="login" id="submit">
+                </form>
+            </div>
         </body>
 
     </html>

@@ -5,15 +5,15 @@
     version="6.0"
     metadata-complete="true">
     <servlet>
-        <servlet-name>home</servlet-name>
-        <servlet-class>gov.iti.controller.HomeServlet</servlet-class>
+        <servlet-name>chat</servlet-name>
+        <jsp-file>/view/pages/chatPage.html</jsp-file>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>home</servlet-name>
-        <url-pattern>/home</url-pattern>
+        <servlet-name>chat</servlet-name>
+        <url-pattern>/chat</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>validate</servlet-name>
         <servlet-class>gov.iti.controller.ValidationServlet</servlet-class>
@@ -23,7 +23,7 @@
         <servlet-name>validate</servlet-name>
         <url-pattern>/validate</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>manager</servlet-name>
         <servlet-class>gov.iti.controller.ManagerServlet</servlet-class>

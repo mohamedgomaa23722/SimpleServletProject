@@ -38,10 +38,6 @@ public class ValidationServlet extends HttpServlet {
             String cPassword =  req.getParameter("cPassword");
             message = (password.equals(cPassword))? "valid confiramtion":"wrong confiramtion";
             out.println(message);
-        }else {
-            File file = new File("view/WEB_INF/Data.xml");
-            
-            out.println("WEB_INF/Data.xml");
         }
     }
 

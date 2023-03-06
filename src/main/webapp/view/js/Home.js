@@ -23,9 +23,6 @@ function populateJSON() {
     var jsonData = req.responseText;
     var myJSONObject = eval('(' + jsonData + ')');
     let tabel = "<table id = \"table\"> <tr> <th>id</th> <th>userName</th> <th>BithDate</th> </tr>";
-    for (let index = 0; index < myJSONObject.length; index++) {
-
-    }
     myJSONObject.forEach(element => {
         let id = element.id;
         let name = element.userName;

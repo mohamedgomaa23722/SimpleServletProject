@@ -21,6 +21,19 @@
   </properties>
 
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
+    <dependency>
+      <groupId>jakarta.json</groupId>
+      <artifactId>jakarta.json-api</artifactId>
+      <version>1.1.5</version>
+  </dependency>
+
+  <dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.10.1</version>
+</dependency>
+
     <dependency>
       <groupId>jakarta.platform</groupId>
       <artifactId>jakarta.jakartaee-api</artifactId>
@@ -40,7 +53,11 @@
       <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
       <version>3.0.0</version>
     </dependency>
-
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>5.0.0</version>
+  </dependency>
     <!-- https://mvnrepository.com/artifact/org.glassfish.web/jakarta.servlet.jsp.jstl -->
     <dependency>
       <groupId>org.glassfish.web</groupId>
@@ -77,10 +94,10 @@
         <artifactId>tomcat7-maven-plugin</artifactId>
         <version>2.2</version>
         <configuration>
-          <username></username>
-          <password></password>
-          <url></url>
-          <path></path>
+          <username>admin</username>
+          <password>admin</password>
+          <url>http://localhost:8080/manager/text</url>
+          <path>/MG1</path>
         </configuration>
       </plugin>
     </plugins>

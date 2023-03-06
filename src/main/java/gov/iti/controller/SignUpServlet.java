@@ -27,8 +27,7 @@ public class SignUpServlet extends HttpServlet {
         String fileName = user.getUserName() + user.getBirthdate();
 
         try {
-            //TODO : Enter file directory
-            file.write("Enter file directory" + fileName + ".jpg");
+            file.write("D:\\textEditor\\serverImages\\" + fileName + ".jpg");
         } catch (IOException fne) {
             response.sendRedirect("signUp");
             return;

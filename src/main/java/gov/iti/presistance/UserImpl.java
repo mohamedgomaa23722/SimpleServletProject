@@ -97,4 +97,15 @@ public class UserImpl implements UserDao {
         }
         return usersList;
     }
+
+    public boolean isExistUserName(String userName) {
+        String query = "Select user_name from user where user_name = ?";
+        try (PreparedStatement statement = ConnectionManager.getInstance().connection.prepareStatement(query)) {
+            statement.setString(1, userName);
+            return statement.executeQuery().next();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }

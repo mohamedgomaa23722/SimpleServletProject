@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>My Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="view/css/styleFile.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="view/js/SignUp.js"></script>
+    </head>
+    <body onload = "setInterval(function() {startRequest(); },5000);">
+        <table id="results"></table>
+        <div id="container">
+            <div id="subContainer">
+                <h1>SignUp</h1>
+                <form ACTION="" name="ajax" >
+                    <div class="input-container">
+                        <i class="fa fa-user icon"></i>
+                        <input class="input-field" id="userName" type="text"
+                            placeholder="Eneter Username" name="userName"  onblur = "submitUserName();">
+                    </div>
+
+                    <label id = "userName_label" hidden>userName used before</label>
+
+                    <div class="input-container">
+                        <i class="fa fa-key icon"></i>
+                        <input class="input-field" id="password" type="password"
+                            placeholder="Eneter password" name="password"  onblur = "submitPassword();">
+                    </div>
+
+                        <label id = "password_label" hidden>weak password</label>
+
+                    <div class="input-container">
+                        <i class="fa fa-key icon"></i>
+                        <input class="input-field" id="cpassword"
+                            type="password" placeholder="Confirm password"  onblur = "submitCPassword();">
+                    </div>
+
+                        <label id = "cpassword_label" hidden>wrong password</label>
+                        <form ACTION="" name="ajax">
+                            <div class="input-container">
+                                <i class="fa fa-calendar icon"></i>
+                                <input class="input-field" id="text" type="text"
+                                    name="text">
+                            </div>
+                            <input type="button" id="submit" value="GET" onclick="getData();">
+                        </form>
+                </div>
+            </form>
+        </div>
+    </body>
+
+</html>

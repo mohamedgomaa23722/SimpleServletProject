@@ -18,8 +18,7 @@ public class DownloadServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("image/jpg");
-        //TODO : Enter file directory
-        String fileDirectory = "Enter file directory";
+        String fileDirectory = "D:\\textEditor\\serverImages\\";
         User user = (User) request.getSession(false).getAttribute("userBean");
         String fileName = user.getUserName() + user.getBirthdate() + ".jpg";
         System.out.println(fileName);

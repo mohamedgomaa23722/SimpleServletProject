@@ -15,8 +15,10 @@
                         href="${pageContext.request.contextPath}/view/css/homeStyle.css">
                     <link rel="stylesheet"
                         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                        <script src="view/js/Home.js"></script>
+
                 </head>
-                <body>
+                <body onload="setInterval(function() {loadJSONFromServlet(); },5000);">
                     <nav class="bar"> <a>Home</a> <a>About</a> <a>Contact us</a>
                     </nav>
                     <div class="center">
@@ -41,15 +43,15 @@
                         <p>Search in user table by name<br> fast access to
                             users
                         </p>
-                        <form action="search" method="get">
+                        <form action="" name="ajax">
                             <input id="searchValue" name="searchValue"
                                 class="filledF"
-                                type="search" placeholder="Search for user">
-                            <input class="filledB" type="submit"
-                                value="search">
+                                type="text" placeholder="Search for user">
+                            <input class="filledB" type="button"
+                                value="search" onclick="loadJSONFromServlet();">
                         </form>
 
                     </div>
-                    <users:userTable searchValue="${param.searchValue}"/>
+                    <div id = "result"></div>
                     </body>
                 </html>

@@ -1,0 +1,5 @@
+<tr> <th> Activity Name </th> <th> Location </th> <th> Time </th></tr>
+<tr> <td> Lecture </td> <td> Lab 107 </td> <td> 77:00 AM </td> </tr>
+<tr> <td> lab </td> <td> Lab 108 </td> <td> 7:00 AM </td> </tr>
+<tr> <td> lab </td> <td> Lab 109 </td> <td> 6:00 AM </td> </tr>
+<tr> <td> Lecture </td> <td> Lab 110 </td> <td> 5:00 AM </td></tr>

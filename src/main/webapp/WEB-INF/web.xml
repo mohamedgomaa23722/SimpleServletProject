@@ -5,6 +5,26 @@
     version="6.0"
     metadata-complete="true">
     <servlet>
+        <servlet-name>home</servlet-name>
+        <servlet-class>gov.iti.controller.HomeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>home</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>validate</servlet-name>
+        <servlet-class>gov.iti.controller.ValidationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>validate</servlet-name>
+        <url-pattern>/validate</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
         <servlet-name>manager</servlet-name>
         <servlet-class>gov.iti.controller.ManagerServlet</servlet-class>
     </servlet>
@@ -86,7 +106,7 @@
     </servlet-mapping>
 
     <welcome-file-list>
-        <welcome-file>login</welcome-file>
+        <welcome-file>view/pages/chatLoginPage.html</welcome-file>
     </welcome-file-list>
     <jsp-config>
         <taglib>
@@ -139,6 +159,7 @@
             <http-method>DELETE</http-method>
             <http-method>POST</http-method>
         </web-resource-collection>
+
         <auth-constraint>
             <role-name>manager</role-name>
             <role-name>tomcat</role-name>
@@ -150,7 +171,7 @@
         <auth-method>FORM</auth-method>
         <realm-name>User Basic Authentication</realm-name>
         <form-login-config>
-            <form-login-page>/view/pages/managerLogin.jsp</form-login-page>
+            <form-login-page>/view/pages/managerLogin.html</form-login-page>
             <form-error-page>/view/pages/errorPage.html</form-error-page>
         </form-login-config>
     </login-config>
